@@ -52,7 +52,7 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.register:
-                startActivity(new Intent(this, register_page.class));
+                startActivity(new Intent(this, navigate_main.class));
                 break ;
 
             case R.id.Login:

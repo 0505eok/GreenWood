@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenWoodApp">
         <activity
+            android:name=".navigate_main"
+            android:exported="false" />
+        <activity
             android:name=".register_page"
             android:exported="false" />
         <activity
@@ -22,10 +25,11 @@
             </intent-filter>
             >
         </activity>
+        <activity android:name=".main_page" />
         <activity android:name=".Calendar.CalendarActivity" />
         <activity android:name=".Call.CallActivity" />
         <activity android:name=".Calendar.EventEditActivity" />
-        <activity android:name=".Calendar.WeekViewActivity"/>
+        <activity android:name=".Calendar.WeekViewActivity" />
     </application>
 
 </manifest>
