@@ -87,13 +87,14 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if (task.isSuccessful()){
-                    //
+                    progressBar.setVisibility(View.GONE);
                     //startActivity(new Intent(login_page.this, register_page.class));
                 }else{
+                    progressBar.setVisibility(View.GONE);
                     Toast.makeText(login_page.this, "Failed to login!", Toast.LENGTH_LONG).show();
 
                 }
             }
-        })
+        });
     }
 }
