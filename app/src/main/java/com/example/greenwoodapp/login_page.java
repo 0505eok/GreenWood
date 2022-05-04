@@ -92,7 +92,6 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
                 }else{
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(login_page.this, "Failed to login!", Toast.LENGTH_LONG).show();
-
                 }
             }
         });
