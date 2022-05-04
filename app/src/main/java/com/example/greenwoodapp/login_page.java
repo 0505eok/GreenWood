@@ -1,6 +1,7 @@
 package com.example.greenwoodapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class login_page extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register;
@@ -75,7 +78,7 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
         }
 
         if (password.isEmpty()){
-            editTextPassword.setError("Passwor is required!");
+            editTextPassword.setError("Password is required!");
             editTextPassword.requestFocus();
             return;
         }
@@ -85,10 +88,10 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
+                System.out.println(task);
                 if (task.isSuccessful()){
                     progressBar.setVisibility(View.GONE);
-                    //startActivity(new Intent(login_page.this, register_page.class));
+                    startActivity(new Intent(login_page.this, main_page.class));
                 }else{
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(login_page.this, "Failed to login!", Toast.LENGTH_LONG).show();
