@@ -18,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Calendar.CalendarActivity" />
+        <activity android:name=".Call.CallActivity" />
+        <activity android:name=".Calendar.EventEditActivity" />
+        <activity android:name=".Calendar.WeekViewActivity"/>
     </application>
 
 </manifest>

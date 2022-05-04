@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GreenWoodApp</string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string name="back"><![CDATA[<-]]></string>
 </resources>
