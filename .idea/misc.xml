@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GreenWoodApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.36614583333333334" />
+        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_login_page2.xml" value="0.36614583333333334" />
         <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.125" />
+        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_register_page2.xml" value="0.31068840579710144" />
         <entry key="..\:/GreenWoodApp/app/src/main/res/layout/login_page.xml" value="0.1" />
       </map>
     </option>
