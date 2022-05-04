@@ -5,18 +5,13 @@
       <map>
         <entry key="app/src/main/res/layout/activity_event_edit.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_register_page2.xml" value="0.22192028985507245" />
         <entry key="app/src/main/res/layout/activity_week_view.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/calendar_cell.xml" value="0.22192028985507245" />
         <entry key="app/src/main/res/layout/calendar_main.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/call_main.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/callendar_cell.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/event_cell.xml" value="0.13697916666666668" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_login_page.xml" value="0.36614583333333334" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_login_page2.xml" value="0.36614583333333334" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_register_page.xml" value="0.125" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/activity_register_page2.xml" value="0.31068840579710144" />
-        <entry key="..\:/GreenWoodApp/app/src/main/res/layout/login_page.xml" value="0.1" />
       </map>
     </option>
   </component>

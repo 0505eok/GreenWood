@@ -12,7 +12,7 @@ import com.example.greenwoodapp.Calendar.CalendarActivity;
 import com.example.greenwoodapp.Call.CallActivity;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
-public class MainActivity extends AppCompatActivity {
+public class main_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
