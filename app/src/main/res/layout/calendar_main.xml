@@ -4,19 +4,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calendar.CalendarActivity"
     android:orientation="vertical">
+<!--    tools:context=".Calendar.CalendarActivity"-->
 
     <Button
+        android:id="@+id/weekBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Weekly"
-        android:onClick="weeklyAction"
         android:textColor="@color/blue"
         android:background="@null"
         android:textStyle="bold"
         android:textSize="20sp"/>
+<!--    android:onClick="weeklyAction"-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,15 +27,16 @@
         android:layout_marginTop="20dp">
 
         <Button
+            android:id="@+id/backBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/back"
-            android:onClick="previousMonthAction"
             android:textColor="@color/blue"
             android:background="@null"
             android:textStyle="bold"
             android:textSize="20sp"/>
+<!--            android:onClick="previousMonthAction"-->
 
         <TextView
             android:id="@+id/monthYearTV"
@@ -47,15 +49,16 @@
             android:textColor="@color/black" />
 
         <Button
+            android:id="@+id/nextBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/forward"
-            android:onClick="nextMonthAction"
             android:textColor="@color/blue"
             android:background="@null"
             android:textStyle="bold"
             android:textSize="20sp"/>
+<!--        android:onClick="nextMonthAction"-->
     </LinearLayout>
 
     <LinearLayout
