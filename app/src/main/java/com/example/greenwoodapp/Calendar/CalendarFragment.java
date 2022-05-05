@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 public class CalendarFragment extends Fragment implements CalendarAdapter.OnItemListener, View.OnClickListener {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
+    //private ListView eventListView;
 
     public CalendarFragment() {
     }
@@ -44,8 +46,10 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
         View v = inflater.inflate(R.layout.calendar_main, container, false);
         calendarRecyclerView = v.findViewById(R.id.calendarRecyclerView);
         monthYearText = v.findViewById(R.id.monthYearTV);
+        //eventListView = v.findViewById(R.id.eventListView);
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
+
         Button backBtn = v.findViewById(R.id.backBtn);
         Button nextBtn = v.findViewById(R.id.nextBtn);
         Button weekBtn = v.findViewById(R.id.weekBtn);
@@ -63,6 +67,8 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
+
+        setEventAdapter();
     }
 
     public void previousMonthAction(View view){
@@ -76,8 +82,9 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
     }
 
     public void weeklyAction(View view) {
-        Intent intent = new Intent(getActivity(), WeekViewActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(getActivity(), WeekViewActivity.class);
+//        startActivity(intent);
+        startActivity(new Intent(getActivity(), EventEditActivity.class));
     }
 
 
@@ -89,6 +96,20 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
             setMonthView();
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setEventAdapter();
+    }
+
+    private void setEventAdapter() {
+        ArrayList<Event> dailyEvents = Event.eventsForDate(CalendarUtils.selectedDate);
+//        EventAdapter eventAdapter = new EventAdapter(getContext().getApplicationContext(), dailyEvents);
+//        eventListView.setAdapter(eventAdapter);
+    }
+
+
 
     @SuppressLint("NonConstantResourceId")
     @Override

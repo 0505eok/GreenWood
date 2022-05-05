@@ -1,5 +1,7 @@
 package com.example.greenwoodapp.Calendar;
 
+import static com.example.greenwoodapp.Calendar.Event.eventsList;
+
 import android.graphics.Color;
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -47,6 +49,11 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
             holder.dayOfMonth.setText("");
         else{
             holder.dayOfMonth.setText(String.valueOf(date.getDayOfMonth()));
+
+            eventsList.stream()
+                    .filter(event -> date.equals(event.getDate()))
+                    .findAny().ifPresent(ev -> holder.parentView.setBackgroundColor(Color.BLUE));
+
             if(date.equals(CalendarUtils.selectedDate))
                 holder.parentView.setBackgroundColor(Color.LTGRAY);
         }
