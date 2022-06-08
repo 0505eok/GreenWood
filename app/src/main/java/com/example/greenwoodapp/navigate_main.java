@@ -26,7 +26,7 @@ public class navigate_main extends AppCompatActivity {
         setContentView(R.layout.activity_navigate_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, calendarFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
